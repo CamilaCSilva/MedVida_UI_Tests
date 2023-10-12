@@ -4,7 +4,7 @@
   "description": "ui tests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress run",
     "npm run cypress": "npx cypress open"
   },
   "repository": {
