@@ -1,5 +1,5 @@
 function navegar() {
-  cy.visit('http://localhost:4200/home')
+  cy.visit('/home')
   cy.get('#filtroData').click()
   cy.get('#filtroData').type('2023-05-23')
   cy.get('#filtroData').type('2023-05-23')

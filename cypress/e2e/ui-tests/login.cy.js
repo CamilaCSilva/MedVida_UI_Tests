@@ -1,5 +1,5 @@
 function login(username, pass){
-  cy.visit('http://localhost:4200/')
+  cy.visit('/login')
   cy.get('#cpf').click()
   cy.get('#cpf').type(username)
   cy.get('#senha').click()
@@ -57,13 +57,13 @@ describe('Cenario de Teste:  Testar a página de login da aplicação MedVida', 
 
   // Cenários de mudança de página
   it('Cenario de Teste: Clicar no botão de cadastro e ir para a tela de cadastro', () => {
-    cy.visit('http://localhost:4200/')
+    cy.visit('/login')
     cy.get('#cadastro').click()
     cy.url().should('contain','/cadastro')
   })
 
   it('Cenario de Teste: Clicar no botão de mais informações e ir para a tela de mais informações', () => {
-    cy.visit('http://localhost:4200/')
+    cy.visit('/login')
     cy.get('#mais-infos').click()
     cy.url().should('contain','/mais-infos')
   })

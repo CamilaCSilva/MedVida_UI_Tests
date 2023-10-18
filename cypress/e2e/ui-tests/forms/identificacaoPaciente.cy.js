@@ -1,5 +1,5 @@
 function preencher(nome, cpf, celular) {
-  cy.visit('http://localhost:4200/home/formularios/identificacao-paciente-form')
+  cy.visit('/home/formularios/identificacao-paciente-form')
 
   if(nome != '') {
     cy.get('#nome').click()
@@ -44,7 +44,7 @@ describe('Cenario de Teste:  Testar o formulário de identificacao do paciente d
   })
 
   it('Cenario de Teste: Voltar a tela de home', () => {
-    cy.visit('http://localhost:4200/home/formularios/identificacao-paciente-form')
+    cy.visit('/home/formularios/identificacao-paciente-form')
     cy.get('.btnVoltar').click()
     cy.url().should('contain','/' || '/home')
   })

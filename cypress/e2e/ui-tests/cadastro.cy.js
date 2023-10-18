@@ -1,5 +1,5 @@
 function cadastrar(nome, area, doc, cpf, unidade, celular, senha){
-  cy.visit('http://localhost:4200/cadastro')
+  cy.request('/cadastro')
   cy.get('#nome').click()
   cy.get('#nome').type(nome)
 
@@ -69,13 +69,13 @@ describe('Cenario de Teste:  Testar a página de cadastro da aplicação MedVida
 
   // Cenários de mudança de página
   it('Cenario de Teste: Clicar no botão de cadastro e ir para a tela de cadastro', () => {
-    cy.visit('http://localhost:4200/cadastro')
+    cy.visit('/cadastro')
     cy.get('#login').click()
     cy.url().should('contain','/')
   })
 
   it('Cenario de Teste: Clicar no botão de mais informações e ir para a tela de mais informações', () => {
-    cy.visit('http://localhost:4200/cadastro')
+    cy.visit('/cadastro')
     cy.get('#mais-infos').click()
     cy.url().should('contain','/mais-infos')
   })

@@ -1,5 +1,5 @@
 function visiteditperfil(){
-  cy.visit('http://localhost:4200/')
+  cy.visit('/login')
   cy.get('#cpf').click()
   cy.get('#cpf').type("131.680.356-29")
   cy.get('#senha').click()

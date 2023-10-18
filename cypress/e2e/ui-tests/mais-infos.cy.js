@@ -1,5 +1,5 @@
 function maisinfos(){
-  cy.visit('http://localhost:4200/')
+  cy.visit('/login')
   cy.get('#mais-infos').click()
 
 }

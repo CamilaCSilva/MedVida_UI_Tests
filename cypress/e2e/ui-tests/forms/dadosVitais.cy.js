@@ -1,5 +1,5 @@
 function preencher(nome, cpf, celular, idade, tipoSangue, sexo, alergias, medicacoes, doencas, sintomas, nivelDor, prioridade, observacoes, pressao, oxigenacao, temperatura, frequenciaRitmica) {
-  cy.visit('http://localhost:4200/home/formularios/identificacao-paciente-form/dados-atendimento-form')
+  cy.visit('/home/formularios/identificacao-paciente-form/dados-atendimento-form')
 
   cy.get('#nome').click()
   cy.get('#nome').type(nome)
